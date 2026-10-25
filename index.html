@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diwali Faral – Pre-Order | Pornima Shinde</title>
+  <meta name="description" content="100% homemade Diwali Faral. Pre-order now on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;500;600&family=Noto+Sans+Devanagari:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <p class="onbv">|| ONBV ||</p>
+    <h1><span class="diya">🪔</span> DIWALI FARAL <span class="diya">🪔</span></h1>
+    <p class="tag">100% Homemade • Freshly Prepared • Pre-Order Now</p>
+  </header>
+
+  <main class="wrap">
+    <p class="hint">Choose quantity for each item (½ kg or 1 kg), then tap <b>Review Order</b>.</p>
+    <section id="items" class="items"></section>
+  </main>
+
+  <footer class="footer">
+    <p>Contact: <b>Pornima Shinde</b> – <a href="tel:+919158448613">9158448613</a></p>
+  </footer>
+
+  <!-- Sticky cart bar -->
+  <div id="cartBar" class="cart-bar hidden">
+    <div><span id="cartCount">0</span> item(s) • <b id="cartTotal">₹0</b></div>
+    <button id="openCheckout">Review Order →</button>
+  </div>
+
+  <!-- Checkout modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <h2>Your Order</h2>
+      <div id="summary" class="summary"></div>
+
+      <form id="orderForm" novalidate>
+        <label>Your Name *
+          <input type="text" id="name" required placeholder="e.g. Rahul Patil">
+        </label>
+        <label>Mobile Number *
+          <input type="tel" id="phone" required inputmode="numeric" maxlength="10" placeholder="10-digit mobile number">
+        </label>
+        <label>Delivery Address / Pickup
+          <textarea id="address" rows="2" placeholder="Full address (or write 'Pickup')"></textarea>
+        </label>
+        <label>Note (optional)
+          <input type="text" id="note" placeholder="Delivery date, special request…">
+        </label>
+        <p id="error" class="error"></p>
+        <button type="submit" class="place">Place Order on WhatsApp ✅</button>
+        <p class="small">WhatsApp will open with your order filled in. Just press <b>Send</b>.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
